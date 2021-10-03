@@ -12,8 +12,8 @@ import Sparse
 from tensorflow.contrib.layers import avg_pool2d as average
 import matplotlib.pyplot as plt
 
-all_data = scio.loadmat('./data/data.mat')['data'][:,:,-1] #[29655,2048,1]
-all_label = scio.loadmat('./data/label.mat')['label'] #[n,1]
+all_data = scio.loadmat('./data/data.mat')['data'][:,:] 
+all_label = scio.loadmat('./data/label.mat')['label']
 all_data = np.squeeze(all_data)
 data = all_data[:10800,:]
 labels = all_label[:10800]
